@@ -1,0 +1,232 @@
+body, html, *, *::after, *::before {
+  font-family: "Cairo", serif !important;
+}
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  direction: rtl;
+}
+
+h1 {
+  text-align: center;
+  color: #075e54;
+  margin-bottom: 30px;
+}
+
+.file-upload {
+  margin-bottom: 20px;
+}
+
+.upload-section {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #075e54;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.message-form textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.send-button {
+  background-color: #25d366;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.send-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: scale(0.98);
+  box-shadow: none;
+}
+.send-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.send-button:hover:not(:disabled) {
+  background-color: #128C7E;
+}
+
+.status-indicator {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.connection-status {
+  color: #075e54;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.numbers-status {
+  color: #128C7E;
+  margin-bottom: 10px;
+}
+
+.results-status {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.success {
+  color: #25d366;
+}
+
+.failed {
+  color: #dc3545;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #25d366;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.qr-container p {
+  margin-bottom: 15px;
+  color: #075e54;
+  font-weight: bold;
+}
+
+.react-tel-input .selected-flag {
+  padding-left: 0 !important;
+  padding-right: 10px !important;
+}
+
+.react-tel-input .country-list {
+  text-align: right !important;
+  margin: 0 !important;
+  max-height: 200px !important;
+}
+
+.react-tel-input .country {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  justify-content: flex-start !important;
+  padding: 7px 10px !important;
+}
+
+.react-tel-input .country .dial-code {
+  color: #666 !important;
+}
+
+.react-tel-input .flag-dropdown {
+  border-radius: 8px 0 0 8px !important;
+  border-left: none !important;
+  border-color: #e5e7eb !important;
+}
+
+.react-tel-input .flag-dropdown.open {
+  border-radius: 8px 0 0 0 !important;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: #f3f4f6 !important;
+  border-radius: 8px 0 0 0 !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: #f3f4f6 !important;
+  border-radius: 8px 0 0 8px !important;
+}
+
+.react-tel-input .form-control {
+  text-align: left !important;
+  border-color: #e5e7eb !important;
+  border-radius: 0 8px 8px 0 !important;
+  height: 44px !important;
+}
+
+.react-tel-input .search-box {
+  text-align: right !important;
+  padding: 10px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Add scrolling for phone numbers container */
+.phone-numbers-container {
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.phone-numbers-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.phone-numbers-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.phone-numbers-container::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 3px;
+}

@@ -13,7 +13,7 @@ function FileUpload({
   const [excelFile, setExcelFile] = useState(null);
   const [mediaFiles, setMediaFiles] = useState([]);
   const [phoneNumbers, setPhoneNumbers] = useState([
-    { number: "", countryCode: "20" },
+    { number: "", countryCode: "966" },
   ]);
   const [excelNumbers, setExcelNumbers] = useState([]);
 
